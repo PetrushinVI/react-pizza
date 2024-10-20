@@ -7,9 +7,8 @@ import Skeleton from "../components/PizzaBlock/Skeleton";
 import PizzaBlock from "../components/PizzaBlock";
 import Pagination from "../components/Pagination";
 import { sortList } from '../components/Sort';
-import {SearchContext} from "../App";
 import {useDispatch, useSelector} from "react-redux";
-import { useNavigate } from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import {selectFilter, setCategoryId, setCurrentPage, setFilters} from "../redux/slices/filterSlice";
 import {fetchPizzas, selectPizzaData} from "../redux/slices/pizzasSlice";
 
@@ -90,7 +89,7 @@ const Home = () => {
 
 
 
-    const pizzas = items.map((obj) => <PizzaBlock key={obj.id} {...obj} />);
+    const pizzas = items.map((obj) => <Link key={obj.id} to={`/pizza/${obj.id}`}><PizzaBlock  {...obj} /></Link>);
 
     const skeletons = [...new Array(6)].map((_, index) => <Skeleton key={index} />);
 
