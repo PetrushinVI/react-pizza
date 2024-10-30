@@ -9,5 +9,5 @@ export const getCartFromLS = () => {
     return {
         items: items as CartItem[],
         totalPrice,
-    }
+    };
 };

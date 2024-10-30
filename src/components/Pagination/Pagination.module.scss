@@ -2,10 +2,6 @@
   li {
     display: inline-block;
 
-
-
-  }
-
   a {
     text-align: center;
     width: 45px;
@@ -22,8 +18,8 @@
       background-color: #fe5f1e;
       color: #fff;
     }
-
   }
+}  
 
   :global {
     .selected {

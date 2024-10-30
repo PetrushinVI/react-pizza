@@ -7,10 +7,6 @@ const initialState: PizzaSliceState = {
     status: Status.LOADING,
 };
 
-
-
-
-
 const pizzaSlice = createSlice({
     name: 'pizza',
     initialState,
@@ -34,8 +30,6 @@ const pizzaSlice = createSlice({
             })
         }
 });
-
-
 
 export const { setItems } = pizzaSlice.actions;
 
